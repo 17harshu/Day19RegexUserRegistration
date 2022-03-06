@@ -45,10 +45,21 @@ public class UserRegistration {
 			System.out.println("Invalid Mobile");
 	}
 
+	public static void password() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nEnter the Password");
+		String p = sc.nextLine();
+		if (Pattern.matches("^(?=.*[a-z])\"+\"(?=.*[A-Z]){8,}$", p) == true)// should have one upper case
+			System.out.println("Valid Password");
+		else
+			System.out.println("Invalid Password");
+	}
+
 	public static void main(String[] args) {
 		// firstName();
 		// lastName();
 		// email();
-		mobile();
+		// mobile();
+		password();
 	}
 }
